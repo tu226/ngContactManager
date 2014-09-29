@@ -1,3 +1,7 @@
+ngContactManager
+
+AngularJS contact manager (Pulling data from Coldfusion webservice)
+
 Contact manager built using AngularJS
 Contaacts are originally pulled from a webservice via jquery using $.getJSON
 
