@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html ng-app="contactsApp">
+
+  <head>
+    <meta charset="utf-8" />
+    <title>AngularJS/Coldfusion - Contact manager</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" />    
+    <script data-require="angular.js@1.0.x" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.js" data-semver="1.0.7"></script>
+    <script src="http://code.jquery.com/jquery-2.1.1.js"></script>
+    <link rel="stylesheet" href="style.css" />        
+    <script src="app.js"></script>
+  </head>
+
+<body ng-controller="mainController">
+
+  <nav class="navbar navbar-default">
+    <div class="container">
+      <div class="navbar-header">
+      <cfoutput>
+        <a class="navbar-brand" href="#request.defaultURL#">Contacts application</a>
+      </cfoutput>
+      </div>
+
+    </div>
+  </nav>
+
+  <div id="main">
+
+    <!-- angular templating -->
+	<!-- this is where content will be injected -->
+    <div ng-view></div>
+
+  </div>
+  
+  <footer class="text-center">
+    <p>Armando Musto | armando.musto@gmail.com</p>
+  </footer>
+  
+</body>
+
+</html>

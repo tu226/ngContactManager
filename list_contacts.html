@@ -1,0 +1,38 @@
+<div class="jumbotron text-center" ng-controller="contactController">
+
+
+        <table align="center" class="table table-condensed" style="margin-top:10px; width:550px;" border="0">
+            <tr>
+                <td>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" id="search" placeholder="search" ng-model="searchText" >
+                    </div>
+
+                </td>
+                <td>
+                    <a href="#contact" style="margin-top: 10px;">Create contact >></a>
+                </td>
+            </tr>
+            <tr ng-repeat="contact in contacts | filter:searchText">
+                <td align="left" width="350px">
+                    <div id="contactFullName" style="width:350px; float:left;">{{contact.fullname}}</div>
+                    <div ng-show="showContactDetails[$index]" id="contactDetails" style="width:100%; float:left;">
+                        <div id="contactDetail" style="float:left; margin-left:10px; width:100%;">
+                            <div style="text-align:right; float:left; width:50px;">name:</div> <div style="text-align:left; margin-left:5px; float:left;">{{contact.fullname}}</div>
+                        </div>
+                        <div id="contactDetail" style="float:left; margin-left:10px; width:100%;">
+                            <div style="text-align:right; float:left; width:50px;">phone:</div> <div style="text-align:left; margin-left:5px; float:left;">{{contact.phone}}</div>
+                        </div>
+                        <div id="contactDetail" style="float:left; margin-left:10px; width:100%;">
+                            <div style="text-align:right; float:left; width:50px;">email:</div> <div style="text-align:left; margin-left:5px; float:left;">{{contact.email}}</div>
+                        </div>
+                    </div>
+
+                </td>
+                <td align="center"><a href="" data-ng-click="showContactDetails($index)">more</a> | <a href="#editContact/{{$index}}">edit</a> | <a href="" data-ng-click="deleteContact($index)">delete</a></td>
+            </tr>
+        </table>
+        <div style="margin-top:20px;"><a href="" data-ng-click="loadContacts()">reload all contacts</a></div>
+	
+	
+</div>

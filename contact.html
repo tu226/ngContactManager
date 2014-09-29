@@ -1,0 +1,27 @@
+<div class="jumbotron text-center">
+
+    <table align="center" class="table table-condensed" style="margin-top:10px; width:550px; text-align:left;" border="0">
+        <tr>
+            <td>
+                <div class="form-group">
+                    <label for="fullName">Name:</label>
+                    <input type="text" class="form-control" id="fullName" placeholder="" ng-model="contact.fullname">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone:</label>
+                    <input type="text" class="form-control" id="phone" placeholder="" ng-model="contact.phone">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="text" class="form-control" id="email" placeholder="" ng-model="contact.email">
+                </div>
+
+                <button ng-show="createContact==false" type="submit" class="btn btn-default" ng-click="updateContact(contact)">Update Contact</button>
+                <button ng-show="createContact" type="submit" class="btn btn-default" ng-click="updateContact(contact)">Add Contact</button>
+                <a href="" ng-click="cancelContact()" style="margin-top: 12px; margin-left: 5px;">( cancel )</a>
+
+            </td>
+        </tr>
+    </table>
+
+</div>

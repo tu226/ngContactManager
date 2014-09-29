@@ -1,4 +1,4 @@
-ngContactManager
-================
+Contact manager built using AngularJS
+Contaacts are originally pulled from a webservice via jquery using $.getJSON
 
-AngularJS contact manager (Pulling data from Coldfusion webservice)
+Note: Webserver for resource is setup with CORS to allow all.
